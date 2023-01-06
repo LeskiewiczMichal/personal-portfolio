@@ -1,0 +1,28 @@
+.about-me--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 1rem;
+
+}
+
+
+.about-me--container > img {
+    max-width: 85vw;
+    margin: 1.4rem;
+    margin-top: 1rem;
+
+    box-shadow: 9px 9px 24px 0px rgb(66, 66, 67);
+}
+
+.about-me--container > h3 {
+    font-size: 2.8rem;
+}
+
+.about-me--container > p {
+    font-size: 1.3rem;
+    color: #343333;
+
+}
