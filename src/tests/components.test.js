@@ -23,12 +23,27 @@ describe("Card component", () => {
     it("renders a photo", () => {
         render(<Card />);
 
-        expect(screen.getByRole('img')).toBeInTheDocument();
+        expect(screen.getByAltText('Project')).toBeInTheDocument();
     });
 
     it("renders project title", () => {
         render(<Card title="Okay" />);
 
         expect(screen.getByRole('heading', {name: /okay/i})).toBeInTheDocument();
+    })
+
+    it("renders two icons", () => {
+        render(<Card />)
+
+        const images = screen.getAllByRole('img');
+
+        expect(images[0]).toBeInTheDocument();
+        expect(images[1]).toBeInTheDocument();
+    })
+
+    it("renders project description", () => {
+        render(<Card description="simple text"/>)
+
+        expect(screen.getByText(/simple text/i)).toBeInTheDocument();
     })
 })

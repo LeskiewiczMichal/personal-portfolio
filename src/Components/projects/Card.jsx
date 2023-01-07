@@ -10,6 +10,7 @@ const Card = (props) => {
                 <a className="card--link" href={props.github}><img className="card--icon" src={githubIcon} alt="github"/></a>
                 <a className="card--link" href={props.link}><img className="card--icon" src={externalIcon} alt="external project" /></a>
             </div>
+            <span className="card--description">{props.description}</span>
         </article>
     )
 }

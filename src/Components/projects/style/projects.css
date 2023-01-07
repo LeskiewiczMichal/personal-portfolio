@@ -3,8 +3,9 @@
     flex-direction: column;
     align-items: center;
 
-    gap: 15px;
-    margin-top: 1.5rem;
+    gap: 30px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .card--wrapper {
@@ -15,7 +16,11 @@
     justify-content: center;
     max-width: 90vw;
 
-    border: 1px solid black;
+    border: 1px solid #393E41;
+    color: #393E41;
+    box-shadow: 5px 5px 6px 0px rgb(145, 145, 147);
+
+    background-color: #FFFFFF;
 }
 
 .card--image {
@@ -24,7 +29,7 @@
 
 .card--title-line {
     display: flex;
-    font-size:  1.4rem;
+    font-size:  1.5rem;
     width: 90%;
     margin: 1rem;
 
@@ -38,7 +43,13 @@
 }
 
 .card--icon {
-    color: black;
     width: auto;
     height: 2rem;
+}
+
+.card--description {
+    /* display: inline-block; */
+    font-size: 1.1rem;
+    margin: 0.5rem;
+    margin-bottom: 2rem;
 }
