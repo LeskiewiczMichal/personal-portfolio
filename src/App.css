@@ -16,5 +16,9 @@ body {
   grid-template-columns: repeat(auto-fill, mixnmax(200px, 1fr));
 }
 
-
+.header-font {
+  font-size: 2.8rem;
+    margin: 0;
+    font-weight: normal;
+}
 

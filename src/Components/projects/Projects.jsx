@@ -6,6 +6,7 @@ import Card from "./Card";
 const Projects = () => {
   return (
     <section className="projects--wrapper">
+      <h3 className="header-font">My work</h3>
       <Card
         img={boilerplate}
         github="google.com"
