@@ -4,17 +4,16 @@
   box-sizing: border-box;
 }
 
-body {
-  background:#f4f5f8;
-  background: linear-gradient(160deg, #8dbbd1 50%, #f4f5f8 50%);
-}
-
 .App {
   max-width: 100vw;
 
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(auto-fill, mixnmax(200px, 1fr));
+
+  background-color: #F6F7EB;
+
+
 }
 
 
