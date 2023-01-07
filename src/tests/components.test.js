@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
 import AboutMe from "../Components/about_me/About_me";
+import Projects from "../Components/projects/Projects";
 import Card from "../Components/projects/Card";
 
 describe("About_me component", () => {
@@ -23,6 +24,14 @@ describe("About_me component", () => {
 
         expect(screen.getByAltText('github')).toBeInTheDocument();
         expect(screen.getByAltText('linkedin')).toBeInTheDocument();
+    })
+})
+
+describe("Projects component", () => {
+    it("renders a header", () => {
+        render(<Projects />);
+
+        expect(screen.getByRole('heading', {name: /my work/i})).toBeInTheDocument();
     })
 })
 
