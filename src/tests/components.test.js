@@ -8,7 +8,7 @@ describe("About_me component", () => {
     it("renders a photo", () => {
         render(<AboutMe />);
         
-        expect(screen.getByRole('img')).toBeInTheDocument();
+        expect(screen.getByAltText('boilerplate')).toBeInTheDocument();
     });
 
     it("renders about me heading and text", () => {
@@ -16,6 +16,13 @@ describe("About_me component", () => {
 
         expect(screen.getByRole('heading', {name: /about me/i})).toBeInTheDocument();
         expect(screen.getByText(/Lorem ipsum/i)).toBeInTheDocument();
+    })
+
+    it("renders icons", () => {
+        render(<AboutMe />);
+
+        expect(screen.getByAltText('github')).toBeInTheDocument();
+        expect(screen.getByAltText('linkedin')).toBeInTheDocument();
     })
 })
 

@@ -37,6 +37,11 @@
 
 }
 
+.card--links-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
 .card--link {
     text-decoration: none;
     margin-left: auto;
