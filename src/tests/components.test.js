@@ -4,6 +4,7 @@ import userEvent from "@testing-library/user-event";
 import AboutMe from "../Components/about_me/About_me";
 import Projects from "../Components/projects/Projects";
 import Card from "../Components/projects/Card";
+import Footer from "../Components/footer/Footer";
 
 describe("About_me component", () => {
     it("renders a photo", () => {
@@ -61,5 +62,28 @@ describe("Card component", () => {
         render(<Card description="simple text"/>)
 
         expect(screen.getByText(/simple text/i)).toBeInTheDocument();
+    })
+})
+
+describe("Footer component", () => {
+    it("render header", () => {
+        render(<Footer />);
+
+        expect(screen.getByRole('heading', {name: /contact me/i})).toBeInTheDocument();
+    })
+
+    it("render a paragraph", () => {
+        render(<Footer />);
+
+        expect(screen.getByText(/lorem ipsum/i)).toBeInTheDocument();
+    })
+
+    it("renders icons", () => {
+        render(<Footer />);
+
+        const images = screen.getAllByRole('img');
+
+        expect(images[0]).toBeInTheDocument();
+        expect(images[1]).toBeInTheDocument();
     })
 })
