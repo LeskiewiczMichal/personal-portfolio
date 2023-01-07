@@ -13,7 +13,7 @@ body {
 
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: repeat(auto-fill, mixnmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .header-font {
